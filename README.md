@@ -1,4 +1,4 @@
-# <img src="https://github.com/JDLeongomez/PowerSimulate_ind_t_EN/blob/master/www/powersimulate.svg" align="left" width=400 height=100 alt=""/><br><br><br><br>
+# <img src="https://github.com/JDLeongomez/PowerSimulate_ind_t_EN/blob/master/www/powersimulate.svg" align="left" width=400 height=100 alt=""/><br><br><br>
 
 ## English
 [*PowerSimulate*](https://shiny.jdl-svr.lat/PowerSimulate/) is a a collection of compact R Shiny applications designed for conducting simulation-based power analyses.
