@@ -10,6 +10,7 @@
 Sys.setlocale("LC_ALL", "en_US.UTF-8")
 library(shiny)
 library(dplyr)
+library(knitr)
 library(kableExtra)
 
 # Define UI for application that draws a histogram
