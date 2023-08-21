@@ -9,6 +9,8 @@
 
 Sys.setlocale("LC_ALL", "en_US.UTF-8")
 library(shiny)
+library(thematic)
+library(shinythemes)
 library(dplyr)
 library(knitr)
 library(kableExtra)
