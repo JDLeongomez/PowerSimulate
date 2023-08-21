@@ -21,7 +21,7 @@ ui <- fluidPage(
                                type = "image",
                                href = "https://image.pngaaa.com/393/402393-middle.png"),
              "PowerSimulate"),
-  HTML("<center><img src='powersimulate.svg'' width='600'></center>"),
+  HTML("<center><a href='https://shiny.jdl-svr.lat/PowerSimulate'><img src='powersimulate.svg'' width='600'></a></center>"),
   p(HTML("<center><a style=color:#4075de;  href='https://jdleongomez.info/'>Juan David Leongómez</a>
       · 2023</a></center>")),
   hr(),
