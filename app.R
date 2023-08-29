@@ -43,7 +43,7 @@ ui <- fluidPage(
              It serves as both an educational tool for demonstrating the concept of statistical 
              power and as a platform to introduce the importance of simulation-based power 
              analysis for more complex designs.<br><br>
-             At this point, there are only 2 <b><i>PowerSimulate</b></i> apps,
+             At this point, there are only 3 <b><i>PowerSimulate</b></i> apps,
              but I plan to add more in the future.
              <br><center>______________________________________</center><br>")),
              p(HTML("<center>Click on the appropriate link to be redirected to the app</center>")),
@@ -73,7 +73,7 @@ ui <- fluidPage(
              Sirve tanto como una herramienta educativa para demostrar el concepto de poder estadístico, 
              como una plataforma para mostrar la importancia del análisis de poder basado en simulación para 
              diseños más complejos.<br><br>
-             En este momento, solo existen 2 aplicaciones de <b><i>PowerSimulate</b></i>, pero planeo crear más en el futuro.
+             En este momento, solo existen 3 aplicaciones de <b><i>PowerSimulate</b></i>, pero planeo crear más en el futuro.
              <br><center>______________________________________</center><br>")),
              p(HTML("<center>Haz clic en el enlace adecuado para abrir a la aplicación correspondiente</center>")),
              tableOutput("esp_kable"),
@@ -96,37 +96,49 @@ server <- function(input, output) {
 
   output$eng_kable <- function() {
     tibble(
-      Design = c("Correlation", "Independent t-test"),
-      `App  (click to open)` = c("PowerSimulate: Correlation", "PowerSimulate: Independent t-test"), 
-      Code = c(rep("GitHub", 2))) |> 
+      Design = c("Correlation", 
+                 "Independent t-test",
+                 "Paired t-test"),
+      `App  (click to open)` = c("PowerSimulate: Correlation", 
+                                 "PowerSimulate: Independent t-test",
+                                 "PowerSimulate: Paired t-test"), 
+      Code = c(rep("GitHub", 3))) |> 
       knitr::kable("html") |> 
       kable_styling("striped", full_width = F)  |> 
       row_spec(0, bold = T, color = "#272b30ff", background = "#ff5555", align = "center") |> 
-      row_spec(1:2, align = "center") |>
+      row_spec(1:3, align = "center") |>
       column_spec(1, monospace = TRUE) |> 
       column_spec(2, color = "#ff5555", bold = TRUE, italic = TRUE,
                   link = c("https://shiny.jdl-svr.lat/PowerSimulate_corr_EN/",
-                           "https://shiny.jdl-svr.lat/PowerSimulate_ind_t_EN/")) |> 
+                           "https://shiny.jdl-svr.lat/PowerSimulate_ind_t_EN/",
+                           "https://shiny.jdl-svr.lat/PowerSimulate_pair_t_EN/")) |> 
       column_spec(3, color = "#4075de",
                   link = c("https://github.com/JDLeongomez/PowerSimulate_corr_EN/",
-                           "https://github.com/JDLeongomez/PowerSimulate_ind_t_EN/"))
+                           "https://github.com/JDLeongomez/PowerSimulate_ind_t_EN/",
+                           "https://github.com/JDLeongomez/PowerSimulate_pair_t_EN/"))
   }
   output$esp_kable <- function() {
     tibble(
-      Diseño = c("Correlación", "Prueba t independiente"),
-      `Aplicación (clic para abrir)` = c("PowerSimulate: Correlación", "PowerSimulate: Prueba t independiente"), 
-      Código = c(rep("GitHub", 2))) |>
+      Diseño = c("Correlación", 
+                 "Prueba t independiente",
+                 "Prueba t pareada"),
+      `Aplicación (clic para abrir)` = c("PowerSimulate: Correlación", 
+                                         "PowerSimulate: Prueba t independiente",
+                                         "PowerSimulate: Prueba t pareada"), 
+      Código = c(rep("GitHub", 3))) |>
       knitr::kable("html") |> 
       kable_styling("striped", full_width = F)  |> 
       row_spec(0, bold = T, color = "#272b30ff", background = "#ff5555", align = "center") |> 
-      row_spec(1:2, align = "center") |>
+      row_spec(1:3, align = "center") |>
       column_spec(1, monospace = TRUE) |> 
       column_spec(2, color = "#ff5555", bold = TRUE, italic = TRUE,
                   link = c("https://shiny.jdl-svr.lat/PowerSimulate_corr_ES/",
-                           "https://shiny.jdl-svr.lat/PowerSimulate_ind_t_ES/")) |> 
+                           "https://shiny.jdl-svr.lat/PowerSimulate_ind_t_ES/",
+                           "https://shiny.jdl-svr.lat/PowerSimulate_pair_t_ES/")) |> 
       column_spec(3, color = "#4075de",
                   link = c("https://github.com/JDLeongomez/PowerSimulate_corr_ES/",
-                           "https://github.com/JDLeongomez/PowerSimulate_ind_t_ES/"))
+                           "https://github.com/JDLeongomez/PowerSimulate_ind_t_ES/",
+                           "https://github.com/JDLeongomez/PowerSimulate_pair_t_ES/"))
   }
 }
 
