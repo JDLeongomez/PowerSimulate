@@ -48,7 +48,8 @@ ui <- fluidPage(
              but I plan to add more in the future.
              <br><center>______________________________________</center><br>")),
              p(HTML("<center>Click on the appropriate link to be redirected to the app</center>")),
-             tableOutput("eng_kable"),
+             tableOutput("eng_kable") %>% 
+               withSpinner(color = "#ff5555"),
              p(HTML("<center>______________________________________</center><br>")),
              tags$h6(HTML("These applications are available on my (rather slow) personal Shiny server. 
                         However, if they run too slowly or my server is not working, you can 
