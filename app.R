@@ -11,6 +11,7 @@ Sys.setlocale("LC_ALL", "en_US.UTF-8")
 library(shiny)
 library(thematic)
 library(shinythemes)
+library(shinycssloaders)
 library(dplyr)
 library(knitr)
 library(kableExtra)
@@ -76,7 +77,8 @@ ui <- fluidPage(
              En este momento, solo existen 3 aplicaciones de <b><i>PowerSimulate</b></i>, pero planeo crear más en el futuro.
              <br><center>______________________________________</center><br>")),
              p(HTML("<center>Haz clic en el enlace adecuado para abrir a la aplicación correspondiente</center>")),
-             tableOutput("esp_kable"),
+             tableOutput("esp_kable") %>% 
+               withSpinner(color = "#ff5555"),
              p(HTML("<center>______________________________________</center><br>")),
              tags$h6(HTML("Estas aplicaciones están disponible en mi (bastante lento) servidor personal Shiny. 
                         Sin embargo, si corren demasiado lento o mi servidor no funciona, siempre puedes 
