@@ -16,5 +16,5 @@ Aunque existen herramientas más directas para el análisis de poder en pruebas 
 
 En este momento, solo existen aplicaciones de [*PowerSimulate*](https://shiny.jdl-svr.lat/PowerSimulate/) para [correlaciones](https://shiny.jdl-svr.lat/PowerSimulate_corr_ES/) y [pruebas t independientes](https://shiny.jdl-svr.lat/PowerSimulate_ind_t_ES/). Sin embargo, planeo crear más aplicaciones en un futuro.
 
-Haz clic aquí para abrir la [lista de aplicaciones e idiomas disponibles].(https://shiny.jdl-svr.lat/PowerSimulate/).
+Haz clic aquí para abrir la [lista de aplicaciones e idiomas disponibles](https://shiny.jdl-svr.lat/PowerSimulate/).
 
